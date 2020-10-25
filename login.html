@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Login page</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="formstyle.css"> 
+    </head>
+    <body>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <div class="container">
+            <h1>Login</h1>
+            <form name = "f">
+                <div class="form-group" >
+                    <label for="email">UserName* : </label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Enter your username" aria-describedby = "helpId">
+                    <span id = "error-mail"></span>
+                </div>
+                <div class = "form-group">
+                    <label for="pass">Password* : </label>
+                    <input type="password" name="pass" id="pass" class="form-control" placeholder="Enter your password" aria-describedby = "helpId">
+                    <span id = "error-pwd"></span>
+                </div>
+                <div class = "form-group">
+                    <input type = "checkbox"> Remember me
+                </div>
+                <div>
+                    New User?<a href = "signup.html">Register Now</a>
+                </div>
+                <p></p>
+                <button class = "btn btn-primary" onclick = "validateForm()">Log In</button>
+           </form>
+        </div>
+        <h5 style = "text-decoration: none;font-size: 30px;font-family: cambria;"><a href="index.html"> << Home </a></h5>
+
+        <script>
+       function validateForm() {
+           var mail = document.f.email.value;
+           var pw = document.f.pass.value;
+           var e1 = document.getElementById("error-mail")
+           var e2 = document.getElementById("error-pwd");
+           if (mail == "") {
+               e1.innerHTML = "*UserName field should not empty";
+               e1.style.color = 'red';
+               return false;
+           }
+           if (pw == "") {
+               e2.innerHTML = "*Password field should not be empty";
+               e2.style.color = 'red';
+               return false;
+           }
+           else if (pw.length < 6) {
+               e2.textContent = "*Password length mis-match";
+               e2.style.color = 'red';
+               return false;
+           }
+           else if (pw != "sr@vya") {
+               e2.textContent = "*Invalid password";
+               e2.style.color = 'red';
+               return false;
+           }
+           else {
+               alert("Successfully logged-in!!!");
+           }
+       }
+   </script>
+   </body>
+</html>

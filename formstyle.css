@@ -1,0 +1,21 @@
+body {
+    background-image : url('bgi.jpg');
+    background-repeat : no-repeat;
+    background-attachment: fixed;
+    background-size : cover;
+}
+
+h1 {
+    font-family: Cambria;
+    text-align : center;
+    color : red;
+}
+
+.container {
+    width : 400px;
+    padding : 10px;
+    margin : auto;
+    background-color : azure;
+    border : 5px;
+    margin-top : 1cm;
+}

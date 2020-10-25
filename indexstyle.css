@@ -1,0 +1,64 @@
+header {
+    text-align : center;
+    padding : 20px;
+    background-color: azure;
+    color : red;
+}
+
+footer {
+    text-align : center;
+    padding : 20px;
+    background-color: darkgray;
+    color : white;
+}
+
+ul{
+    list-style-type : none;
+    margin : 10px;
+    padding : 0;
+    overflow : hidden;
+    background-color : greenyellow;
+}
+
+li{
+    float : left;
+}
+
+li a{
+    display : block;
+    text-decoration: none;
+    color : blue;
+    text-align : center;
+    padding : 14px 16px;
+}
+
+li a:hover:not(.active) {
+    color : white;
+    background-color : red;
+}
+
+.active {
+    color : bisque;
+    background-color : blueviolet;
+}
+/*
+body {
+    background-image : url("book_index.jpg");
+    background-repeat : no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+*/
+
+.column {
+    float : left;
+    width : 25%;
+    padding-bottom : 20px;
+    text-align : center;
+}
+
+.row:after {
+    content : "";
+    display : table;
+    clear : both;
+}
